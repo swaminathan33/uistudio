@@ -1,0 +1,175 @@
+{
+	"routes": [
+		{
+			"id": "library",
+			"method": "API",
+			"url": "/api/",
+			"auth": 1,
+			"owner": "plugin_library"
+		},
+		{
+			"id": "library_save",
+			"method": "API",
+			"url": "/api/",
+			"auth": 1,
+			"owner": "plugin_library",
+			"input": "data:Object"
+		},
+		{
+			"id": "library_clone",
+			"method": "API",
+			"url": "/api/",
+			"auth": 1,
+			"owner": "plugin_library",
+			"params": "id:String"
+		},
+		{
+			"id": "library_publish",
+			"method": "API",
+			"url": "/api/",
+			"auth": 1,
+			"owner": "plugin_library",
+			"input": "data:Object"
+		},
+		{
+			"id": "library_remove",
+			"method": "API",
+			"url": "/api/",
+			"auth": 1,
+			"owner": "plugin_library",
+			"params": "id:String"
+		},
+		{
+			"id": "setup_read",
+			"method": "API",
+			"url": "/api/",
+			"auth": 1,
+			"owner": "plugin_setup",
+			"input": "*name:string,totalapi:string,allow_tms:boolean,secret_tms:string,op_reqtoken:string,op_restoken:string,token:string"
+		},
+		{
+			"id": "setup_save",
+			"method": "API",
+			"url": "/api/",
+			"auth": 1,
+			"owner": "plugin_setup",
+			"input": "*name:string,totalapi:string,allow_tms:boolean,secret_tms:string,op_reqtoken:string,op_restoken:string,token:string"
+		},
+		{
+			"id": "account",
+			"method": "API",
+			"url": "/api/",
+			"auth": 1,
+			"owner": "plugin_setup",
+			"input": "*name:string,totalapi:string,allow_tms:boolean,secret_tms:string,op_reqtoken:string,op_restoken:string,token:string"
+		},
+		{
+			"method": "POST",
+			"url": "/upload/",
+			"auth": 1,
+			"owner": "controller_default"
+		},
+		{
+			"method": "POST",
+			"url": "/api/",
+			"auth": 1,
+			"owner": "plugin_library"
+		},
+		{
+			"method": "GET",
+			"url": "/download/",
+			"auth": 1,
+			"owner": "plugin_library"
+		},
+		{
+			"method": "GET",
+			"url": "/download/{id}/",
+			"auth": 1,
+			"owner": "plugin_library",
+			"params": "id:string"
+		},
+		{
+			"method": "POST",
+			"url": "/render/",
+			"owner": "plugin_library"
+		},
+		{
+			"method": "GET",
+			"url": "/play/",
+			"owner": "plugin_library"
+		},
+		{
+			"method": "GET",
+			"url": "/render/{id}/",
+			"owner": "plugin_library",
+			"params": "id:string"
+		},
+		{
+			"method": "GET",
+			"url": "/*",
+			"auth": 1,
+			"owner": "controller_default"
+		},
+		{
+			"method": "GET",
+			"url": "/*",
+			"auth": 2,
+			"owner": "controller_default"
+		}
+	],
+	"plugins": [
+		{
+			"id": "library",
+			"name": "@(Library)",
+			"permissions": "library,library_create"
+		},
+		{
+			"id": "setup",
+			"name": "@(Configuration)",
+			"permissions": "setup"
+		}
+	],
+	"actions": [
+		{
+			"name": "Library --> list"
+		},
+		{
+			"name": "Library --> save",
+			"input": "data:Object",
+			"publish": "id,name,group,icon,color,dtcreated,size,published,type,version,token"
+		},
+		{
+			"name": "Library --> publish",
+			"input": "data:Object",
+			"publish": "id,name,group,icon,color,dtcreated,size,published,type,version,token"
+		},
+		{
+			"name": "Library --> clone",
+			"params": "id:String"
+		},
+		{
+			"name": "Library --> remove",
+			"params": "id:String",
+			"publish": "id,name,group,icon,color,dtcreated,size,published,type,version,token"
+		},
+		{
+			"name": "Library --> export"
+		},
+		{
+			"name": "Setup --> permissions",
+			"input": "*name:string,totalapi:string,allow_tms:boolean,secret_tms:string,op_reqtoken:string,op_restoken:string,token:string"
+		},
+		{
+			"name": "Setup --> save",
+			"input": "*name:string,totalapi:string,allow_tms:boolean,secret_tms:string,op_reqtoken:string,op_restoken:string,token:string"
+		},
+		{
+			"name": "Setup --> read",
+			"input": "*name:string,totalapi:string,allow_tms:boolean,secret_tms:string,op_reqtoken:string,op_restoken:string,token:string"
+		},
+		{
+			"name": "Setup --> account",
+			"input": "*name:string,totalapi:string,allow_tms:boolean,secret_tms:string,op_reqtoken:string,op_restoken:string,token:string"
+		}
+	]
+}

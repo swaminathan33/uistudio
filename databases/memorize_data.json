@@ -1,0 +1,29 @@
+{
+	"config": {
+		"name": "UI Studio",
+		"token": "9elkcacxsfszd0h13ig98j1a93jh8g6yh1x",
+		"cdn": "//cdn.componentator.com",
+		"totalapi": "",
+		"allow_tms": false,
+		"secret_tms": "",
+		"op_reqtoken": "97i8mmsypmizfdahbo6aaewjvpn7vhewb15st15ba",
+		"op_restoken": "oiz5obqn2neksunscox01aspagry0hg1klbos0atz"
+	},
+	"items": [
+		{
+			"id": "lyrxz2xm",
+			"token": "190c8523-8523-3b5c-a2e9-3d3fb4b55e9b",
+			"dtupdated": "2024-07-19T00:11:15.010Z",
+			"dtcreated": "2024-07-19T00:08:14.991Z",
+			"size": 1791,
+			"name": "App name",
+			"version": "0.0.1",
+			"icon": "ti ti-totaljs",
+			"type": "app",
+			"inputs": [],
+			"outputs": [],
+			"description": "",
+			"published": "2024-07-19T00:11:15.010Z"
+		}
+	]
+}
